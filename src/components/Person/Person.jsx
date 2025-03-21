@@ -1,9 +1,9 @@
-export function Person({ person }) {
-  const { name, age, sex, married, partner } = person;
-
+export function Person({ person: { name, age, sex, married, partner } }) {
   return (
     <div className="Person">
-      <p className="Person__name">{name}</p>
+      <p className="Person__name">
+        {name}
+      </p>
 
       {age && (
         <p className="Person__age">
